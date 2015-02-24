@@ -1,0 +1,37 @@
+{
+  "name": "gfazioli/react-switch-button",
+  "version": "1.0.0",
+  "homepage": "https://github.com/gfazioli/react-switch-button",
+  "license": "MIT",
+  "type": "library",
+  "description": "React Switch Button control",
+  "keywords": [
+    "react",
+    "react.js",
+    "switch",
+    "button",
+    "control",
+    "javascript"
+  ],
+  "authors": [
+    {
+    "name": "Giovambattista Fazioli",
+    "email": "g.fazioli@wpxtre.me",
+    "homepage" : "http://undolog.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gfazioli/react-switch-button"
+  },
+  "support": {
+    "email": "g.fazioli@wpxtre.me"
+  },
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-0": {
+    "react-switch-button": "src/"
+    }
+  },
+  "prefer-stable" : true
+}
