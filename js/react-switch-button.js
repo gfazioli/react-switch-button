@@ -1,14 +1,27 @@
 /**
- * React Switch Control
+ * React Switch Control.
+ * Simple React UI component used to display a switch button control.
  *
+ *   Usage: <SwitchButton {...props} />
+ *
+ * @class           SwitchButton
+ * @author          =undo= <g.fazioli@wpxtre.me>
+ * @date            2015-02-24
+ * @version         1.0.2
  */
 
 var SwitchButton = React.createClass( {
 
+  // Display name
+  displayName : 'Switch Button',
+
+  // Version
+  version : '1.0.2',
+
   /**
    * The props types.
    */
-  propType : {
+  propTypes : {
     id             : React.PropTypes.string,
     name           : React.PropTypes.string,
     title          : React.PropTypes.string,
