@@ -9,3 +9,5 @@ Simple React component.
 ## Page
 
 Please visit [http://gfazioli.github.io/react-switch-button](http://gfazioli.github.io/react-switch-button) for more detail
+
+See [Online Demo](http://gfazioli.github.io/react-switch-button#demo)
