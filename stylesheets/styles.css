@@ -849,3 +849,8 @@ section #title .credits.right {
     display: none;
   }
 }
+
+.rsbc-switch-button
+{
+  margin: 16px 0 !important;
+}
