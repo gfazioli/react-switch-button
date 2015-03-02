@@ -50,7 +50,7 @@ var SwitchButton = React.createClass( {
       defaultChecked : '',
       theme          : 'rsbc-switch-button-flat-round',
       checked        : null,
-      onChange       : this.hadleChange
+      onChange       : this.handleChange
     };
   },
 
