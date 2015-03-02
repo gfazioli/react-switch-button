@@ -1,6 +1,6 @@
 {
   "name": "react-swicth-button",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
   "main": "js/react-switch-button.js",
   "scripts": {
