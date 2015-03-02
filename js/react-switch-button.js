@@ -6,8 +6,8 @@
  *
  * @class           SwitchButton
  * @author          =undo= <g.fazioli@wpxtre.me>
- * @date            2015-02-24
- * @version         1.0.2
+ * @date            2015-03-02
+ * @version         1.0.3
  */
 
 var SwitchButton = React.createClass( {
@@ -16,7 +16,7 @@ var SwitchButton = React.createClass( {
   displayName : 'Switch Button',
 
   // Version
-  version : '1.0.2',
+  version : '1.0.3',
 
   /**
    * The props types.
@@ -54,9 +54,10 @@ var SwitchButton = React.createClass( {
     };
   },
 
-  // Handle chenge
+  // Handle change
   handleChange    : function()
   {
+    // Override
   },
 
   /**
