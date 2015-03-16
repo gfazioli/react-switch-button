@@ -1,0 +1,25 @@
+{
+  "name": "react-switch-button",
+  "version": "1.0.3",
+  "homepage": "https://github.com/gfazioli/react-switch-button",
+  "authors": [
+    "Giovambattista Fazioli <g.fazioli@wpxtre.me>"
+  ],
+  "description": "Switch button React component",
+  "main": "js/react-switch-button.js",
+  "keywords": [
+    "react",
+    "switch",
+    "button",
+    "component",
+    "ui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
