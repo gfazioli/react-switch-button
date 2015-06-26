@@ -4,6 +4,12 @@
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
   "main": "dist/js/react-switch-button.js",
   "scripts": {
+    "build": "npm run build:jsx && npm run build:cp && npm run example && npm run example:jsx && npm run less:minify",
+    "build:jsx": "./node_modules/.bin/jsx --harmony ./src/ ./dist/",
+    "less:minify": "./node_modules/.bin/lessc -x ./src/react-switch-button.less ./dist/react-switch-button.min.css",
+    "build:cp": "./node_modules/.bin/uglifyjs ./dist/react-switch-button.js -o ./dist/react-switch-button.min.js",
+    "example": "cp ./dist/*min.* ./example/assets/",
+    "example:jsx": "./node_modules/.bin/jsx --harmony ./example/src/ ./example/assets/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,14 +32,13 @@
   },
   "homepage": "https://github.com/gfazioli/react-switch-button",
   "peerDependencies": {
-    "react": ">=0.13"
+    "react": "^0.13.3"
   },
   "devDependencies": {
-    "react": "~0.12.0",
-    "react-async": "~2.0.0",
-    "react-router-component": "git://github.com/STRML/react-router-component#react-0.12",
+    "less": "^2.5.1",
+    "react": "^0.13.3",
+    "react-tools": "^0.13.3",
     "requirejs": "~2.1.9",
-    "rf-changelog": "^0.4.0",
-    "semver": "~2.0.7"
+    "uglify-js": "^2.4.23"
   }
 }
