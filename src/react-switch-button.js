@@ -7,8 +7,14 @@
  * @class           SwitchButton
  * @author          =undo= <g.fazioli@wpxtre.me>
  * @date            2015-03-02
- * @version         1.0.3
+ * @version         1.0.4
+ *
+ * @history         1.0.0 First public release
+ * @history         1.0.3 Minor fixes
+ * @history         1.0.4 @deprecated since 1.0.4 - use labelRight instead - issue #5 https://github.com/gfazioli/react-switch-button/issues/5
  */
+
+"use strict";
 
 var SwitchButton = React.createClass( {
 
@@ -16,7 +22,7 @@ var SwitchButton = React.createClass( {
   displayName : 'Switch Button',
 
   // Version
-  version : '1.0.3',
+  version : '1.0.4',
 
   /**
    * The props types.
@@ -27,6 +33,7 @@ var SwitchButton = React.createClass( {
     title          : React.PropTypes.string,
     label          : React.PropTypes.string,
     label_right    : React.PropTypes.string,
+    labelRight     : React.PropTypes.string,
     defaultChecked : React.PropTypes.string,
     theme          : React.PropTypes.string,
     checked        : React.PropTypes.string,
@@ -47,6 +54,7 @@ var SwitchButton = React.createClass( {
       title          : '',
       label          : '',
       label_right    : '',
+      labelRight     : '',
       defaultChecked : '',
       theme          : 'rsbc-switch-button-flat-round',
       checked        : null,
@@ -55,7 +63,7 @@ var SwitchButton = React.createClass( {
   },
 
   // Handle change
-  handleChange    : function()
+  handleChange : function()
   {
     // Override
   },
@@ -67,7 +75,7 @@ var SwitchButton = React.createClass( {
    */
   render : function()
   {
-    var id, label, label_right;
+    var id, label, labelRight;
 
     if( this.props.id == '' && this.props.name != '' ) {
       id = this.props.name;
@@ -79,18 +87,24 @@ var SwitchButton = React.createClass( {
       );
     }
 
-    if( this.props.label_right != '' ) {
-      label_right = (
-        <label htmlFor={id}>{this.props.label_right}</label>
+    // @deprecated since 1.0.4 - use labelRight instead - issue #5 https://github.com/gfazioli/react-switch-button/issues/5
+    if( 'undefined' !== this.props.label_right || this.props.label_right != '' ) {
+      this.props.labelRight = this.props.label_right;
+    }
+
+    if( this.props.labelRight != '' ) {
+      labelRight = (
+        <label htmlFor={id}>{this.props.labelRight}</label>
       );
     }
 
     return (
       <div className={'rsbc-switch-button ' + this.props.theme }>
         {label}
-        <input onChange={this.props.onChange} checked={this.props.checked} defaultChecked={this.props.defaultChecked} id={id} name={this.props.name} type="checkbox" value="1" />
+        <input onChange={this.props.onChange} checked={this.props.checked} defaultChecked={this.props.defaultChecked}
+               id={id} name={this.props.name} type="checkbox" value="1"/>
         <label htmlFor={id}></label>
-        {label_right}
+        {labelRight}
       </div>
     );
   }

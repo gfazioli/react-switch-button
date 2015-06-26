@@ -31,7 +31,7 @@ var Demo = React.createClass( {
     {
 
       return (
-        <div>
+        <div key={i}>
           <pre>{o.code}</pre>
         {o.object}
         </div>
