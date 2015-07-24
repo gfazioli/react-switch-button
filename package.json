@@ -1,5 +1,5 @@
 {
-  "name": "react-swicth-button",
+  "name": "react-switch-button",
   "version": "1.0.4",
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
   "main": "dist/js/react-switch-button.js",
