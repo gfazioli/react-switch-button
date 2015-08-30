@@ -16,6 +16,9 @@
 
 "use strict";
 
+// Compatibility for either using tranditional or Node.js way to load JavaScript.
+var React = window.React || require('react');
+
 var SwitchButton = React.createClass( {
 
   // Display name
@@ -110,3 +113,5 @@ var SwitchButton = React.createClass( {
   }
 
 } );
+
+module.exports = SwitchButton;

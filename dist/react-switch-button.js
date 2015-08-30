@@ -16,6 +16,8 @@
 
 "use strict";
 
+var React = window.React || require('react');
+
 var SwitchButton = React.createClass( {
 
   // Display name
@@ -110,3 +112,5 @@ var SwitchButton = React.createClass( {
   }
 
 } );
+
+module.exports = SwitchButton;
