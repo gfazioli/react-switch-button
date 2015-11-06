@@ -16,9 +16,21 @@
 
 "use strict";
 
-// Compatibility for either using tranditional or Node.js way to load JavaScript.
-var React = window.React || require('react');
-
+// UMD
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['react'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // Node. Does not work with strict CommonJS, but
+    // only CommonJS-like environments that support module.exports,
+    // like Node.
+    module.exports = factory(require('react'));
+  } else {
+    // Browser globals (root is window)
+    root.SwitchButton = factory(root.React);
+  }
+}(this, function (React) {
 var SwitchButton = React.createClass( {
 
   // Display name
@@ -114,4 +126,5 @@ var SwitchButton = React.createClass( {
 
 } );
 
-module.exports = SwitchButton;
+return SwitchButton;
+}));
