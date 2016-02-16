@@ -47,7 +47,6 @@ var SwitchButton = React.createClass( {
     name           : React.PropTypes.string,
     title          : React.PropTypes.string,
     label          : React.PropTypes.string,
-    label_right    : React.PropTypes.string,
     labelRight     : React.PropTypes.string,
     defaultChecked : React.PropTypes.string,
     theme          : React.PropTypes.string,
@@ -59,7 +58,7 @@ var SwitchButton = React.createClass( {
   /**
    * Default propos.
    *
-   * @returns {{id: string, name: string, title: string, label: string, label_right: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
+   * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
    */
   getDefaultProps : function()
   {
@@ -68,7 +67,6 @@ var SwitchButton = React.createClass( {
       name           : 'switch-button',
       title          : '',
       label          : '',
-      label_right    : '',
       labelRight     : '',
       defaultChecked : '',
       theme          : 'rsbc-switch-button-flat-round',
@@ -100,11 +98,6 @@ var SwitchButton = React.createClass( {
       label = (
         <label htmlFor={id}>{this.props.label}</label>
       );
-    }
-
-    // @deprecated since 1.0.4 - use labelRight instead - issue #5 https://github.com/gfazioli/react-switch-button/issues/5
-    if( 'undefined' !== this.props.label_right && this.props.label_right != '' ) {
-      this.props.labelRight = this.props.label_right;
     }
 
     if( this.props.labelRight != '' ) {
