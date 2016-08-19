@@ -10,7 +10,7 @@
  * @version         1.0.2
  */
 
-var SwitchButton = React.createClass( {
+window.SwitchButton = React.createClass( {
 
   // Display name
   displayName : 'Switch Button',

@@ -32,14 +32,14 @@
   },
   "homepage": "https://github.com/gfazioli/react-switch-button",
   "peerDependencies": {
-    "react": "^0.14.7"
+    "react": "^15.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-preset-react": "^6.5.0",
     "less": "^2.5.1",
-    "react": "^0.14.7",
-    "requirejs": "~2.1.9",
+    "react": "^15.3.0",
+    "requirejs": "~2.2.0",
     "uglify-js": "^2.4.23"
   }
 }
