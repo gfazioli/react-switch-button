@@ -45,7 +45,6 @@ var SwitchButton = React.createClass( {
   propTypes : {
     id             : React.PropTypes.string,
     name           : React.PropTypes.string,
-    title          : React.PropTypes.string,
     label          : React.PropTypes.string,
     labelRight     : React.PropTypes.string,
     defaultChecked : React.PropTypes.string,
@@ -56,29 +55,16 @@ var SwitchButton = React.createClass( {
 
 
   /**
-   * Default propos.
+   * Default props.
    *
-   * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
+   * @returns {{id: string, name: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
    */
   getDefaultProps : function()
   {
     return {
-      id             : '',
       name           : 'switch-button',
-      title          : '',
-      label          : '',
-      labelRight     : '',
-      defaultChecked : '',
       theme          : 'rsbc-switch-button-flat-round',
-      checked        : null,
-      onChange       : this.handleChange
     };
-  },
-
-  // Handle change
-  handleChange : function()
-  {
-    // Override
   },
 
   /**
@@ -88,31 +74,15 @@ var SwitchButton = React.createClass( {
    */
   render : function()
   {
-    var id, label, labelRight;
-
-    if( this.props.id == '' && this.props.name != '' ) {
-      id = this.props.name;
-    }
-
-    if( this.props.label != '' ) {
-      label = (
-        <label htmlFor={id}>{this.props.label}</label>
-      );
-    }
-
-    if( this.props.labelRight != '' ) {
-      labelRight = (
-        <label htmlFor={id}>{this.props.labelRight}</label>
-      );
-    }
+    var id = this.props.id || this.props.name;
 
     return (
       <div className={'rsbc-switch-button ' + this.props.theme }>
-        {label}
+        {this.props.label ? <label htmlFor={id}>{this.props.label}</label> : null}
         <input onChange={this.props.onChange} checked={this.props.checked} defaultChecked={this.props.defaultChecked}
                id={id} name={this.props.name} type="checkbox" value="1"/>
         <label htmlFor={id}></label>
-        {labelRight}
+        {this.props.labelRight ? <label htmlFor={id}>{this.props.labelRight}</label> : null}
       </div>
     );
   }
