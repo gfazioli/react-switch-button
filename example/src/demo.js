@@ -50,7 +50,7 @@ var Demo = React.createClass( {
 
 } );
 
-React.render(
+ReactDOM.render(
   <Demo />,
   document.getElementById( 'content' )
 );

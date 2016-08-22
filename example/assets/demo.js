@@ -18,12 +18,12 @@ var Demo = React.createClass( {displayName: "Demo",
         object : React.createElement(SwitchButton, {name: "switch-3", label: "Click me", defaultChecked: "checked"})
       },
       {
-        code   : '<SwitchButton name="switch-4" label_right="Click me" defaultChecked="checked" />',
-        object : React.createElement(SwitchButton, {name: "switch-4", label_right: "Click me", defaultChecked: "checked"})
+        code   : '<SwitchButton name="switch-4" labelRight="Click me" defaultChecked="checked" />',
+        object : React.createElement(SwitchButton, {name: "switch-4", labelRight: "Click me", defaultChecked: "checked"})
       },
       {
-        code   : '<SwitchButton name="switch-5" label="Both" label_right="Click me" defaultChecked="checked" />',
-        object : React.createElement(SwitchButton, {name: "switch-5", label: "Both", label_right: "Click me", defaultChecked: "checked"})
+        code   : '<SwitchButton name="switch-5" label="Both" labelRight="Click me" defaultChecked="checked" />',
+        object : React.createElement(SwitchButton, {name: "switch-5", label: "Both", labelRight: "Click me", defaultChecked: "checked"})
       }
     ];
 
@@ -31,8 +31,8 @@ var Demo = React.createClass( {displayName: "Demo",
     {
 
       return (
-        React.createElement("div", {key: i}, 
-          React.createElement("pre", null, o.code), 
+        React.createElement("div", {key: i},
+          React.createElement("pre", null, o.code),
         o.object
         )
       );
@@ -40,8 +40,8 @@ var Demo = React.createClass( {displayName: "Demo",
     } );
 
     return (
-      React.createElement("div", {style: style}, 
-        React.createElement("h1", null, "Hello, React Switch Button"), 
+      React.createElement("div", {style: style},
+        React.createElement("h1", null, "Hello, React Switch Button"),
       rows
       )
     );
@@ -50,7 +50,7 @@ var Demo = React.createClass( {displayName: "Demo",
 
 } );
 
-React.render(
+ReactDOM.render(
   React.createElement(Demo, null),
   document.getElementById( 'content' )
 );

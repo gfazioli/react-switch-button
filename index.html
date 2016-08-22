@@ -16,8 +16,10 @@
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/JSXTransformer.js"></script>
+
+    <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
 
     <!--[if lt IE 9]>
       <script>
@@ -35,10 +37,10 @@
 
       <!-- SwitchButton -->
       <link rel="stylesheet" href="stylesheets/react-switch-button.css">
-      <script type="text/jsx;harmony=true" src="javascripts/react-switch-button.js"></script>
+      <script type="text/babel" src="javascripts/react-switch-button.js"></script>
 
       <!-- Demo -->
-      <script type="text/jsx;harmony=true" src="javascripts/demo.js"></script>
+      <script type="text/babel" src="javascripts/demo.js"></script>
 
   </head>
   <body>
@@ -102,6 +104,6 @@
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
   </body>
 </html>
