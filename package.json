@@ -40,15 +40,14 @@
     "gulp-util": "^3.0.6",
     "merge-stream": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.4.0"
+    "watchify": "^3.4.0",
+    "react": "^0.12.2",
+    "reactify": "^0.17.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "happiness": "*",
     "react-component-gulp-tasks": "^0.7.7"
-  },
-  "peerDependencies": {
-    "gulp": "^3.8.0"
   },
   "browser": "src/react-switch-button.js",
   "browserify": {
