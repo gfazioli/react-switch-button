@@ -26,9 +26,7 @@
 }
 .rsbc-switch-button > label:first-child {
   display: inline-block;
-  min-width: 140px;
-  text-align: right;
-  margin: 0 6px 0 12px;
+  margin: 0 6px 0 0px;
 }
 .rsbc-switch-button label + label {
   margin-left: 6px;

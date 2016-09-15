@@ -1,6 +1,6 @@
-var React = require('react');
+const React = require('react');
 
-var SwitchButton = React.createClass( {
+const SwitchButton = React.createClass( {
 
   // Display name
   displayName : 'Switch Button',
@@ -18,6 +18,7 @@ var SwitchButton = React.createClass( {
     label          : React.PropTypes.string,
     labelRight     : React.PropTypes.string,
     defaultChecked : React.PropTypes.string,
+    disabled       : React.PropTypes.bool,
     theme          : React.PropTypes.string,
     checked        : React.PropTypes.string,
     onChange       : React.PropTypes.func
@@ -25,7 +26,7 @@ var SwitchButton = React.createClass( {
 
 
   /**
-   * Default propos.
+   * Default props.
    *
    * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
    */
@@ -37,6 +38,7 @@ var SwitchButton = React.createClass( {
       title          : '',
       label          : '',
       labelRight     : '',
+      disabled       : false,
       defaultChecked : '',
       theme          : 'rsbc-switch-button-flat-round',
       checked        : null,
@@ -76,11 +78,16 @@ var SwitchButton = React.createClass( {
     }
 
     return (
-      <div className={'rsbc-switch-button ' + this.props.theme }>
+      <div className={'rsbc-switch-button ' + this.props.theme + ( this.props.disabled ? " disabled" : "") }>
         {label}
-        <input onChange={this.props.onChange} checked={this.props.checked} defaultChecked={this.props.defaultChecked}
-               id={id} name={this.props.name} type="checkbox" value="1"/>
-        <label htmlFor={id}></label>
+        <input onChange={this.props.onChange}
+               defaultChecked={this.props.defaultChecked}
+               disabled={this.props.disabled}
+               id={id} name={this.props.name}
+               type="checkbox"
+               value="1"/>
+        <label htmlFor={id}>
+        </label>
         {labelRight}
       </div>
     );

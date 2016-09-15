@@ -22,13 +22,14 @@ var SwitchButton = React.createClass({
     label: React.PropTypes.string,
     labelRight: React.PropTypes.string,
     defaultChecked: React.PropTypes.string,
+    disabled: React.PropTypes.bool,
     theme: React.PropTypes.string,
     checked: React.PropTypes.string,
     onChange: React.PropTypes.func
   },
 
   /**
-   * Default propos.
+   * Default props.
    *
    * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
    */
@@ -39,6 +40,7 @@ var SwitchButton = React.createClass({
       title: '',
       label: '',
       labelRight: '',
+      disabled: false,
       defaultChecked: '',
       theme: 'rsbc-switch-button-flat-round',
       checked: null,
@@ -83,10 +85,14 @@ var SwitchButton = React.createClass({
 
     return React.createElement(
       'div',
-      { className: 'rsbc-switch-button ' + this.props.theme },
+      { className: 'rsbc-switch-button ' + this.props.theme + (this.props.disabled ? " disabled" : "") },
       label,
-      React.createElement('input', { onChange: this.props.onChange, checked: this.props.checked, defaultChecked: this.props.defaultChecked,
-        id: id, name: this.props.name, type: 'checkbox', value: '1' }),
+      React.createElement('input', { onChange: this.props.onChange,
+        defaultChecked: this.props.defaultChecked,
+        disabled: this.props.disabled,
+        id: id, name: this.props.name,
+        type: 'checkbox',
+        value: '1' }),
       React.createElement('label', { htmlFor: id }),
       labelRight
     );
