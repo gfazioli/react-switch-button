@@ -1,34 +1,29 @@
 {
   "name": "react-switch-button",
-  "version": "1.1.2",
-  "homepage": "https://github.com/gfazioli/react-switch-button",
+  "main": "dist/react-switch-button.min.js",
+  "version": "2.0.0",
+  "homepage": "http://gfazioli.github.io/react-switch-button/",
   "authors": [
-    "Giovambattista Fazioli <g.fazioli@undolog.com>"
+    "Giovambattista Fazioli"
   ],
-  "description": "Switch button React component",
-  "main": [
-    "dist/react-switch-button.min.js",
-    "dist/react-switch-button.min.css"
+  "description": "React Switch Button",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
   ],
   "keywords": [
     "react",
-    "switch",
-    "button",
-    "component",
-    "ui"
+    "react-component"
   ],
   "license": "MIT",
-  "dependencies": {
-    "react": ">=0.13"
-  },
   "ignore": [
-    "**/.*",
-    "bower_components",
-    "node_modules",
+    ".editorconfig",
+    ".gitignore",
     "package.json",
     "src",
-    "exeample",
-    "test",
-    "tests"
+    "node_modules",
+    "example",
+    "test"
   ]
 }

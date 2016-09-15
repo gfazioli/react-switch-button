@@ -1,43 +1,12 @@
-/**
- * React Switch Control.
- * Simple React UI component used to display a switch button control.
- *
- *   Usage: <SwitchButton {...props} />
- *
- * @class           SwitchButton
- * @author          =undo= <g.fazioli@wpxtre.me>
- * @date            2015-03-02
- * @version         1.0.4
- *
- * @history         1.0.0 First public release
- * @history         1.0.3 Minor fixes
- * @history         1.0.4 @deprecated since 1.0.4 - use labelRight instead - issue #5 https://github.com/gfazioli/react-switch-button/issues/5
- */
+var React = require('react');
 
-"use strict";
-
-// UMD
-(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['react'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // Node. Does not work with strict CommonJS, but
-    // only CommonJS-like environments that support module.exports,
-    // like Node.
-    module.exports = factory(require('react'));
-  } else {
-    // Browser globals (root is window)
-    root.SwitchButton = factory(root.React);
-  }
-}(this, function (React) {
 var SwitchButton = React.createClass( {
 
   // Display name
   displayName : 'Switch Button',
 
   // Version
-  version : '1.0.4',
+  version : '2.0.0',
 
   /**
    * The props types.
@@ -88,7 +57,7 @@ var SwitchButton = React.createClass( {
    */
   render : function()
   {
-    var id, label, labelRight;
+    let id, label, labelRight;
 
     if( this.props.id == '' && this.props.name != '' ) {
       id = this.props.name;
@@ -119,5 +88,4 @@ var SwitchButton = React.createClass( {
 
 } );
 
-return SwitchButton;
-}));
+module.exports = SwitchButton;

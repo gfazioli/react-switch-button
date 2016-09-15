@@ -1,124 +1,101 @@
-/**
- * React Switch Control.
- * Simple React UI component used to display a switch button control.
- *
- *   Usage: <SwitchButton {...props} />
- *
- * @class           SwitchButton
- * @author          =undo= <g.fazioli@wpxtre.me>
- * @date            2015-03-02
- * @version         1.0.4
- *
- * @history         1.0.0 First public release
- * @history         1.0.3 Minor fixes
- * @history         1.0.4 @deprecated since 1.0.4 - use labelRight instead - issue #5 https://github.com/gfazioli/react-switch-button/issues/5
- */
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.reactSwitchButton = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function (global){
+'use strict';
 
-"use strict";
+var React = (typeof window !== "undefined" ? window['React'] : typeof global !== "undefined" ? global['React'] : null);
 
-// UMD
+var SwitchButton = React.createClass({
 
-(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['react'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // Node. Does not work with strict CommonJS, but
-    // only CommonJS-like environments that support module.exports,
-    // like Node.
-    module.exports = factory(require('react'));
-  } else {
-    // Browser globals (root is window)
-    root.SwitchButton = factory(root.React);
-  }
-})(this, function (React) {
-  var SwitchButton = React.createClass({
+  // Display name
+  displayName: 'Switch Button',
 
-    // Display name
-    displayName: 'Switch Button',
+  // Version
+  version: '2.0.0',
 
-    // Version
-    version: '1.0.4',
+  /**
+   * The props types.
+   */
+  propTypes: {
+    id: React.PropTypes.string,
+    name: React.PropTypes.string,
+    title: React.PropTypes.string,
+    label: React.PropTypes.string,
+    labelRight: React.PropTypes.string,
+    defaultChecked: React.PropTypes.string,
+    theme: React.PropTypes.string,
+    checked: React.PropTypes.string,
+    onChange: React.PropTypes.func
+  },
 
-    /**
-     * The props types.
-     */
-    propTypes: {
-      id: React.PropTypes.string,
-      name: React.PropTypes.string,
-      title: React.PropTypes.string,
-      label: React.PropTypes.string,
-      labelRight: React.PropTypes.string,
-      defaultChecked: React.PropTypes.string,
-      theme: React.PropTypes.string,
-      checked: React.PropTypes.string,
-      onChange: React.PropTypes.func
-    },
+  /**
+   * Default propos.
+   *
+   * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
+   */
+  getDefaultProps: function getDefaultProps() {
+    return {
+      id: '',
+      name: 'switch-button',
+      title: '',
+      label: '',
+      labelRight: '',
+      defaultChecked: '',
+      theme: 'rsbc-switch-button-flat-round',
+      checked: null,
+      onChange: this.handleChange
+    };
+  },
 
-    /**
-     * Default propos.
-     *
-     * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
-     */
-    getDefaultProps: function () {
-      return {
-        id: '',
-        name: 'switch-button',
-        title: '',
-        label: '',
-        labelRight: '',
-        defaultChecked: '',
-        theme: 'rsbc-switch-button-flat-round',
-        checked: null,
-        onChange: this.handleChange
-      };
-    },
+  // Handle change
+  handleChange: function handleChange() {
+    // Override
+  },
 
-    // Handle change
-    handleChange: function () {
-      // Override
-    },
+  /**
+   * Render Switch Button control
+   *
+   * @returns {XML}
+   */
+  render: function render() {
+    var id = undefined,
+        label = undefined,
+        labelRight = undefined;
 
-    /**
-     * Render Switch Button control
-     *
-     * @returns {XML}
-     */
-    render: function () {
-      var id, label, labelRight;
+    if (this.props.id == '' && this.props.name != '') {
+      id = this.props.name;
+    }
 
-      if (this.props.id == '' && this.props.name != '') {
-        id = this.props.name;
-      }
-
-      if (this.props.label != '') {
-        label = React.createElement(
-          'label',
-          { htmlFor: id },
-          this.props.label
-        );
-      }
-
-      if (this.props.labelRight != '') {
-        labelRight = React.createElement(
-          'label',
-          { htmlFor: id },
-          this.props.labelRight
-        );
-      }
-
-      return React.createElement(
-        'div',
-        { className: 'rsbc-switch-button ' + this.props.theme },
-        label,
-        React.createElement('input', { onChange: this.props.onChange, checked: this.props.checked, defaultChecked: this.props.defaultChecked,
-          id: id, name: this.props.name, type: 'checkbox', value: '1' }),
-        React.createElement('label', { htmlFor: id }),
-        labelRight
+    if (this.props.label != '') {
+      label = React.createElement(
+        'label',
+        { htmlFor: id },
+        this.props.label
       );
     }
 
-  });
+    if (this.props.labelRight != '') {
+      labelRight = React.createElement(
+        'label',
+        { htmlFor: id },
+        this.props.labelRight
+      );
+    }
 
-  return SwitchButton;
+    return React.createElement(
+      'div',
+      { className: 'rsbc-switch-button ' + this.props.theme },
+      label,
+      React.createElement('input', { onChange: this.props.onChange, checked: this.props.checked, defaultChecked: this.props.defaultChecked,
+        id: id, name: this.props.name, type: 'checkbox', value: '1' }),
+      React.createElement('label', { htmlFor: id }),
+      labelRight
+    );
+  }
+
+});
+
+module.exports = SwitchButton;
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}]},{},[1])(1)
 });

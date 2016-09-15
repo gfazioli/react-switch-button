@@ -4,6 +4,10 @@
 
 Simple React component.
 
+## Gulp
+
+    gulp --taks
+
 ## Page
 
 Please visit [http://gfazioli.github.io/react-switch-button](http://gfazioli.github.io/react-switch-button) for more detail
