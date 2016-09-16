@@ -17,7 +17,7 @@ const SwitchButton = React.createClass( {
     title          : React.PropTypes.string,
     label          : React.PropTypes.string,
     labelRight     : React.PropTypes.string,
-    defaultChecked : React.PropTypes.string,
+    defaultChecked : React.PropTypes.bool,
     disabled       : React.PropTypes.bool,
     theme          : React.PropTypes.string,
     checked        : React.PropTypes.string,
@@ -39,7 +39,7 @@ const SwitchButton = React.createClass( {
       label          : '',
       labelRight     : '',
       disabled       : false,
-      defaultChecked : '',
+      defaultChecked : false,
       theme          : 'rsbc-switch-button-flat-round',
       checked        : null,
       onChange       : this.handleChange

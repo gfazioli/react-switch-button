@@ -1,4 +1,5 @@
 const React        = require( 'react' ),
+      ReactDom     = require( 'react-dom' ),
       SwitchButton = require( 'react-switch-button' );
 
 const App = React.createClass( {
@@ -13,46 +14,46 @@ const App = React.createClass( {
       },
       {
         label  : "Set initial status",
-        code   : '<SwitchButton name="switch-2" defaultChecked="checked" />',
+        code   : '<SwitchButton name="switch-2" defaultChecked={true} />',
         object : <SwitchButton name="switch-2"
-                               defaultChecked="checked"/>
+                               defaultChecked={true}/>
       },
       {
         label  : "Add left label",
-        code   : '<SwitchButton name="switch-3" label="Click me" defaultChecked="checked" />',
+        code   : '<SwitchButton name="switch-3" label="Click me" defaultChecked={true} />',
         object : <SwitchButton name="switch-3"
                                label="Click me"
-                               defaultChecked="checked"/>
+                               defaultChecked={true}/>
       },
       {
         label  : "Add right label",
-        code   : '<SwitchButton name="switch-4" labelRight="Click me" defaultChecked="checked" />',
+        code   : '<SwitchButton name="switch-4" labelRight="Click me" defaultChecked={true} />',
         object : <SwitchButton name="switch-4"
                                labelRight="Click me"
-                               defaultChecked="checked"/>
+                               defaultChecked={true}/>
       },
       {
         label  : "Add left and right label",
-        code   : '<SwitchButton name="switch-5" label="Both" label_right="Click me" defaultChecked="checked" />',
+        code   : '<SwitchButton name="switch-5" label="Both" label_right="Click me" defaultChecked={true} />',
         object : <SwitchButton name="switch-5"
                                label="Both"
                                labelRight="Click me"
-                               defaultChecked="checked"/>
+                               defaultChecked={true}/>
       },
       {
         label  : "Disabled when On",
-        code   : '<SwitchButton name="switch-6" label="Disabled" disabled={true} defaultChecked="checked" />',
+        code   : '<SwitchButton name="switch-6" label="Disabled" disabled={true} defaultChecked={true} />',
         object : <SwitchButton name="switch-6"
                                label="Disabled"
                                disabled={true}
-                               defaultChecked="checked"/>
+                               defaultChecked={true}/>
       },
       {
         label  : "Disabled when Off",
         code   : '<SwitchButton name="switch-7" label="Disabled" disabled={true} />',
         object : <SwitchButton name="switch-7"
                                label="Disabled"
-                               disabled={true} />
+                               disabled={true}/>
       }
     ];
 
@@ -81,4 +82,4 @@ const App = React.createClass( {
   }
 } );
 
-React.render( <App />, document.getElementById( 'app' ) );
+ReactDom.render( <App />, document.getElementById( 'app' ) );
