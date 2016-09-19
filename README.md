@@ -6,8 +6,6 @@ A Switch control built with and for [React](http://facebook.github.io/react/inde
 
 I've rewrite the component model with some alignment for ES6.
 
-    https://unpkg.com/react-switch-button@2.0.0/dist/react-switch-button.min.js
-
 ## Demo & Example
 
 Example: [http://gfazioli.github.io/react-switch-button](http://gfazioli.github.io/react-switch-button)
