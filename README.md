@@ -4,7 +4,7 @@ A Switch control built with and for [React](http://facebook.github.io/react/inde
 
 ## New version 2.0.0
 
-I've rewrite the component model with some alignment for ES6.
+I've rewritten the component model with some alignment for ES6.
 
 ## Demo & Example
 
@@ -15,7 +15,7 @@ Live demo: [Online Demo](http://gfazioli.github.io/react-switch-button#demo)
 
 ## Installation
 
-You can use React Switch Buttont by using NPM and include it in your own React build process (using [Browserify](http://browserify.org), etc).
+You can use React Switch Button by using NPM and include it in your own React build process (using [Browserify](http://browserify.org), etc).
 
 ```javascript
 npm install react-switch-button --save
@@ -55,5 +55,3 @@ Thanks for any your contribute.
 # License
 
 MIT Licensed. Copyright (c) Giovambattista Fazioli 2016.
-
-
