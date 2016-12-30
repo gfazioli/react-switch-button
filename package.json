@@ -1,9 +1,9 @@
 {
   "name": "react-switch-button",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "private": false,
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
-  "main": "dist/react-switch-button.js",
+  "main": "dist/react-switch-button.min.js",
   "author": "Giovambattista fazioli",
   "license": "MIT",
   "homepage": "http://gfazioli.github.io/react-switch-button/",
@@ -23,7 +23,7 @@
     "gulp": "^3.9.1",
     "react-component-gulp-tasks": "^0.7.7"
   },
-  "browser": "dist/react-switch-button.js",
+  "browser": "dist/react-switch-button.min.js",
   "browserify": {
     "transform": [
       "reactify"
