@@ -4,24 +4,44 @@ const React        = require( 'react' ),
 
 const App = React.createClass( {
 
+  onChange : function(e)
+  {
+    const theme = ( this.state.theme === 'rsbc-switch-button-flat-square' ) ? 'rsbc-switch-button-flat-round' : 'rsbc-switch-button-flat-square'
+
+    this.setState(
+      {
+        theme : theme
+      }
+    );
+  },
+
+  getInitialState : function() {
+
+    return {
+      theme : 'rsbc-switch-button-flat-round'
+    };
+  },
+
   render : function()
   {
 
     const code = [
       {
         label : "Simple usage",
-        code  : '<SwitchButton name="switch-1" />', object : <SwitchButton name="switch-1"/>
+        code  : '<SwitchButton name="switch-1" />', object : <SwitchButton theme={this.state.theme} name="switch-1"/>
       },
       {
         label  : "Set initial status",
         code   : '<SwitchButton name="switch-2" defaultChecked={true} />',
         object : <SwitchButton name="switch-2"
+                               theme={this.state.theme}
                                defaultChecked={true}/>
       },
       {
         label  : "Add left label",
         code   : '<SwitchButton name="switch-3" label="Click me" defaultChecked={true} />',
         object : <SwitchButton name="switch-3"
+                               theme={this.state.theme}
                                label="Click me"
                                defaultChecked={true}/>
       },
@@ -29,6 +49,7 @@ const App = React.createClass( {
         label  : "Add right label",
         code   : '<SwitchButton name="switch-4" labelRight="Click me" defaultChecked={true} />',
         object : <SwitchButton name="switch-4"
+                               theme={this.state.theme}
                                labelRight="Click me"
                                defaultChecked={true}/>
       },
@@ -36,6 +57,7 @@ const App = React.createClass( {
         label  : "Add left and right label",
         code   : '<SwitchButton name="switch-5" label="Both" label_right="Click me" defaultChecked={true} />',
         object : <SwitchButton name="switch-5"
+                               theme={this.state.theme}
                                label="Both"
                                labelRight="Click me"
                                defaultChecked={true}/>
@@ -44,6 +66,7 @@ const App = React.createClass( {
         label  : "Disabled when On",
         code   : '<SwitchButton name="switch-6" label="Disabled" disabled={true} defaultChecked={true} />',
         object : <SwitchButton name="switch-6"
+                               theme={this.state.theme}
                                label="Disabled"
                                disabled={true}
                                defaultChecked={true}/>
@@ -52,6 +75,7 @@ const App = React.createClass( {
         label  : "Disabled when Off",
         code   : '<SwitchButton name="switch-7" label="Disabled" disabled={true} />',
         object : <SwitchButton name="switch-7"
+                               theme={this.state.theme}
                                label="Disabled"
                                disabled={true}/>
       }
@@ -76,6 +100,8 @@ const App = React.createClass( {
     return (
       <div className="examples">
         <h1>Say Hello, React Switch Button</h1>
+        <SwitchButton name="switch-theme" label="Switch Theme" onChange={this.onChange} />
+        <hr/>
         {rows}
       </div>
     );

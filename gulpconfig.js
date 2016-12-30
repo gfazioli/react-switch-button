@@ -48,6 +48,7 @@ module.exports = {
 		// Files will be copied as-is into the example dist folder
 		files: [
 			'index.html',
+			'theme.html'
 		],
 		// Scripts will be bundled by browserify and reactify
 		scripts: [

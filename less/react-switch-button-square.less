@@ -1,0 +1,115 @@
+/**
+ * React Switch Button control style square.
+ *
+ * @author          =undo= <g.fazioli@undolog.com>
+ * @date            2016-12-30
+ * @version         1.0.0
+ *
+ */
+
+// Variables
+// ---------------------------------------------------------------------------------------------------------------------
+@rsbc-transtion-delay: 0.4s;
+@rsbc-theme-flat-color-on: #579fcb;
+@rsbc-theme-flat-color-on-border: darken(@rsbc-theme-flat-color-on, 10%);
+@rsbc-theme-flat-color-off: #aaa;
+@rsbc-theme-flat-color-off-border: darken(@rsbc-theme-flat-color-off, 10%);
+@rsbc-theme-flat-color-disabled: #eee;
+@rsbc-theme-flat-color-disabled-border: darken(@rsbc-theme-flat-color-disabled, 10%);
+
+@import "utilities.less";
+
+// Main Switch Button container
+.rsbc-switch-button
+{
+  // Theme
+  &.rsbc-switch-button-flat-square input[type="checkbox"] + label
+  {
+    padding          : 2px;
+    width            : 48px;
+    height           : 24px;
+    vertical-align   : middle;
+    background-color : @rsbc-theme-flat-color-off;
+    .rsbc-border-radius(3px);
+    .rsbc-transition(background 0.4s);
+  }
+
+  &.rsbc-switch-button-flat-square.disabled input[type="checkbox"] + label
+  {
+    background-color : @rsbc-theme-flat-color-disabled;
+  }
+
+  &.rsbc-switch-button-flat-square:hover input[type="checkbox"] + label
+  {
+    background-color : @rsbc-theme-flat-color-on;
+  }
+
+  &.rsbc-switch-button-flat-square.disabled:hover input[type="checkbox"] + label
+  {
+    background-color : @rsbc-theme-flat-color-disabled;
+  }
+
+  &.rsbc-switch-button-flat-square input[type="checkbox"] + label:before,
+  &.rsbc-switch-button-flat-square input[type="checkbox"] + label:after
+  {
+    display  : inline-block;
+    position : absolute;
+    content  : "";
+  }
+
+  // inner background
+  &.rsbc-switch-button-flat-square input[type="checkbox"] + label:before
+  {
+    top              : 2px;
+    left             : 2px;
+    bottom           : 2px;
+    right            : 2px;
+    background-color : #fff;
+    .rsbc-border-radius(2px);
+    .rsbc-transition(background 0.4s);
+  }
+
+  &.rsbc-switch-button-flat-square input[type="checkbox"] + label:after
+  {
+    top              : 4px;
+    left             : 4px;
+    bottom           : 4px;
+    width            : 16px;
+    background-color : @rsbc-theme-flat-color-off-border;
+    .rsbc-border-radius(2px);
+    .rsbc-transition(margin 0.4s, background 0.4s;);
+  }
+
+  &.rsbc-switch-button-flat-square.disabled input[type="checkbox"] + label:after
+  {
+    background-color : @rsbc-theme-flat-color-disabled-border;
+  }
+
+  &.rsbc-switch-button-flat-square:hover input[type="checkbox"]:checked + label
+  {
+    background-color : @rsbc-theme-flat-color-off;
+  }
+
+  &.rsbc-switch-button-flat-square input[type="checkbox"]:checked + label
+  {
+    background-color : @rsbc-theme-flat-color-on;
+  }
+
+  &.rsbc-switch-button-flat-square.disabled input[type="checkbox"]:checked + label
+  {
+    background-color : @rsbc-theme-flat-color-disabled;
+  }
+
+  &.rsbc-switch-button-flat-square input[type="checkbox"]:checked + label:after
+  {
+    margin-left      : 24px;
+    background-color : @rsbc-theme-flat-color-on-border;
+  }
+
+  &.rsbc-switch-button-flat-square.disabled input[type="checkbox"]:checked + label:after
+  {
+    margin-left      : 24px;
+    background-color : @rsbc-theme-flat-color-disabled-border;
+  }
+
+}

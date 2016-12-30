@@ -6,7 +6,7 @@ const SwitchButton = React.createClass( {
   displayName : 'Switch Button',
 
   // Version
-  version : '2.0.0',
+  version : '2.1.0',
 
   /**
    * The props types.
@@ -61,17 +61,17 @@ const SwitchButton = React.createClass( {
   {
     let id, label, labelRight;
 
-    if( this.props.id == '' && this.props.name != '' ) {
+    if( this.props.id === '' && this.props.name !== '' ) {
       id = this.props.name;
     }
 
-    if( this.props.label != '' ) {
+    if( this.props.label !== '' ) {
       label = (
         <label htmlFor={id}>{this.props.label}</label>
       );
     }
 
-    if( this.props.labelRight != '' ) {
+    if( this.props.labelRight !== '' ) {
       labelRight = (
         <label htmlFor={id}>{this.props.labelRight}</label>
       );
