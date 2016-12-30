@@ -29,6 +29,12 @@ var App = React.createClass({
       label: "Simple usage",
       code: '<SwitchButton name="switch-1" />', object: React.createElement(SwitchButton, { theme: this.state.theme, name: 'switch-1' })
     }, {
+      label: "Set Theme",
+      code: '<SwitchButton name="switch-1t" theme="rsbc-switch-button-flat-square" defaultChecked={true} />',
+      object: React.createElement(SwitchButton, { name: 'switch-1t',
+        theme: 'rsbc-switch-button-flat-square',
+        defaultChecked: true })
+    }, {
       label: "Set initial status",
       code: '<SwitchButton name="switch-2" defaultChecked={true} />',
       object: React.createElement(SwitchButton, { name: 'switch-2',
@@ -104,6 +110,15 @@ var App = React.createClass({
         'h1',
         null,
         'Say Hello, React Switch Button'
+      ),
+      React.createElement(
+        'div',
+        { className: 'example' },
+        React.createElement(
+          'h3',
+          null,
+          'New in v.2.1.0'
+        )
       ),
       React.createElement(SwitchButton, { name: 'switch-theme', label: 'Switch Theme', onChange: this.onChange }),
       React.createElement('hr', null),

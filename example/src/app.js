@@ -31,6 +31,13 @@ const App = React.createClass( {
         code  : '<SwitchButton name="switch-1" />', object : <SwitchButton theme={this.state.theme} name="switch-1"/>
       },
       {
+        label  : "Set Theme",
+        code   : '<SwitchButton name="switch-1t" theme="rsbc-switch-button-flat-square" defaultChecked={true} />',
+        object : <SwitchButton name="switch-1t"
+                               theme="rsbc-switch-button-flat-square"
+                               defaultChecked={true}/>
+      },
+      {
         label  : "Set initial status",
         code   : '<SwitchButton name="switch-2" defaultChecked={true} />',
         object : <SwitchButton name="switch-2"
@@ -100,6 +107,11 @@ const App = React.createClass( {
     return (
       <div className="examples">
         <h1>Say Hello, React Switch Button</h1>
+
+        <div className="example">
+          <h3>New in v.2.1.0</h3>
+        </div>
+
         <SwitchButton name="switch-theme" label="Switch Theme" onChange={this.onChange} />
         <hr/>
         {rows}

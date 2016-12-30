@@ -2,16 +2,14 @@
 
 A Switch control built with and for [React](http://facebook.github.io/react/index.html)
 
-## New version 2.0.0
+## New version 2.1.0
 
-I've rewritten the component model with some alignment for ES6.
+Add square theme.
 
 ## Demo & Example
 
 Example: [http://gfazioli.github.io/react-switch-button](http://gfazioli.github.io/react-switch-button)
 Live demo: [Online Demo](http://gfazioli.github.io/react-switch-button#demo)
-
-![schermata 2016-09-16 alle 15 49 23](https://cloud.githubusercontent.com/assets/432181/18588077/42623d26-7c25-11e6-9e43-4043ac288d0a.png)
 
 ## Installation
 
