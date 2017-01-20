@@ -1,6 +1,6 @@
 {
   "name": "react-switch-button",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": false,
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
   "main": "dist/react-switch-button.min.js",
@@ -17,7 +17,7 @@
   "dependencies": {
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
-    "reactify": "^0.17.1"
+    "babelify": "~7.3"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -26,7 +26,7 @@
   "browser": "dist/react-switch-button.min.js",
   "browserify": {
     "transform": [
-      "reactify"
+      "babelify"
     ]
   },
   "browserify-shim": {

@@ -38,8 +38,8 @@ and then include the *css* in your HTML page.
 
 Of course, you can also use the standalone build by including `react-switch-button.js` and `react-switch-button.css` in your page. (If you do this though you'll also need to include the dependencies.) For example:
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
 <script src="https://unpkg.com/classnames/index.js"></script>
 <script src="https://unpkg.com/react-switch-button/dist/react-switch-button.js"></script>
 

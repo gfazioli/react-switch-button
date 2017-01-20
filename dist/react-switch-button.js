@@ -2,7 +2,7 @@
 (function (global){
 'use strict';
 
-var React = (typeof window !== "undefined" ? window['React'] : typeof global !== "undefined" ? global['React'] : null);
+var React = typeof window !== "undefined" ? window['React'] : typeof global !== "undefined" ? global['React'] : null;
 
 var SwitchButton = React.createClass({
 
@@ -68,34 +68,19 @@ var SwitchButton = React.createClass({
     }
 
     if (this.props.label !== '') {
-      label = React.createElement(
-        'label',
-        { htmlFor: id },
-        this.props.label
-      );
+      label = React.createElement('label', { htmlFor: id }, this.props.label);
     }
 
     if (this.props.labelRight !== '') {
-      labelRight = React.createElement(
-        'label',
-        { htmlFor: id },
-        this.props.labelRight
-      );
+      labelRight = React.createElement('label', { htmlFor: id }, this.props.labelRight);
     }
 
-    return React.createElement(
-      'div',
-      { className: 'rsbc-switch-button ' + this.props.theme + (this.props.disabled ? " disabled" : "") },
-      label,
-      React.createElement('input', { onChange: this.props.onChange,
-        defaultChecked: this.props.defaultChecked,
-        disabled: this.props.disabled,
-        id: id, name: this.props.name,
-        type: 'checkbox',
-        value: '1' }),
-      React.createElement('label', { htmlFor: id }),
-      labelRight
-    );
+    return React.createElement('div', { className: 'rsbc-switch-button ' + this.props.theme + (this.props.disabled ? " disabled" : "") }, label, React.createElement('input', { onChange: this.props.onChange,
+      defaultChecked: this.props.defaultChecked,
+      disabled: this.props.disabled,
+      id: id, name: this.props.name,
+      type: 'checkbox',
+      value: '1' }), React.createElement('label', { htmlFor: id }), labelRight);
   }
 
 });
