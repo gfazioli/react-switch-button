@@ -1,68 +1,20 @@
-import React from "react";
+const React = require( 'react' );
 
-const SwitchButton = React.createClass( {
+class SwitchButton extends React.Component {
 
-  // Display name
-  displayName : 'Switch Button',
-
-  // Version
-  version : '2.2.2',
-
-  /**
-   * The props types.
-   */
-  propTypes : {
-    id             : React.PropTypes.string,
-    name           : React.PropTypes.string,
-    title          : React.PropTypes.string,
-    label          : React.PropTypes.string,
-    labelRight     : React.PropTypes.string,
-    defaultChecked : React.PropTypes.bool,
-    disabled       : React.PropTypes.bool,
-    theme          : React.PropTypes.string,
-    checked        : React.PropTypes.string,
-    mode           : React.PropTypes.string,
-    onChange       : React.PropTypes.func
-  },
-
-
-  /**
-   * Default props.
-   *
-   * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
-   */
-  getDefaultProps : function()
+  constructor( props )
   {
-    return {
-      id             : '',
-      name           : 'switch-button',
-      title          : '',
-      label          : '',
-      labelRight     : '',
-      disabled       : false,
-      defaultChecked : false,
-      theme          : 'rsbc-switch-button-flat-round',
-      checked        : null,
-      mode           : "switch",
-      onChange       : this.handleChange
-    };
-  },
+    super( props );
+  }
 
-  // Handle change
-  handleChange : function()
+  handleChange()
   {
-    // Override
-  },
+    // you can override this method
+  }
 
-  /**
-   * Render Switch Button control
-   *
-   * @returns {XML}
-   */
-  render : function()
+  render()
   {
-    let id, label, labelRight,
-        mode = this.props.mode || "switch";
+    let id, label, labelRight;
 
     if( this.props.id === '' && this.props.name !== '' ) {
       id = this.props.name;
@@ -80,17 +32,14 @@ const SwitchButton = React.createClass( {
       );
     }
 
-    if( [ 'switch', 'select' ].indexOf( mode ) < -1 ) {
-      mode = "switch";
-    }
-
     return (
-      <div className={'rsbc-switch-button rsbc-mode-' + mode + ' ' + this.props.theme + ( this.props.disabled ? " disabled" : "") }>
+      <div className={'rsbc-switch-button ' + this.props.theme + ( this.props.disabled ? " disabled" : "") }>
         {label}
         <input onChange={this.props.onChange}
                defaultChecked={this.props.defaultChecked}
                disabled={this.props.disabled}
-               id={id} name={this.props.name}
+               id={id}
+               name={this.props.name}
                type="checkbox"
                value="1"/>
         <label htmlFor={id}>
@@ -99,7 +48,32 @@ const SwitchButton = React.createClass( {
       </div>
     );
   }
+}
 
-} );
+SwitchButton.propTypes = {
+  id             : React.PropTypes.string,
+  name           : React.PropTypes.string,
+  title          : React.PropTypes.string,
+  label          : React.PropTypes.string,
+  labelRight     : React.PropTypes.string,
+  defaultChecked : React.PropTypes.bool,
+  disabled       : React.PropTypes.bool,
+  theme          : React.PropTypes.string,
+  checked        : React.PropTypes.string,
+  onChange       : React.PropTypes.func
+};
 
-export default SwitchButton;
+SwitchButton.defaultProps = {
+  id             : '',
+  name           : 'switch-button',
+  title          : '',
+  label          : '',
+  labelRight     : '',
+  disabled       : false,
+  defaultChecked : false,
+  theme          : 'rsbc-switch-button-flat-round',
+  checked        : null,
+  onChange       : SwitchButton.handleChange
+};
+
+module.exports = SwitchButton;
