@@ -2,6 +2,10 @@
 
 A Switch control built with and for [React](http://facebook.github.io/react/index.html)
 
+## ES6 version
+
+This is the ES6 version
+
 ## New version 2.1.0
 
 Add square theme.
@@ -52,4 +56,4 @@ Thanks for any your contribute.
 
 # License
 
-MIT Licensed. Copyright (c) Giovambattista Fazioli 2016.
+MIT Licensed. Copyright (c) Giovambattista Fazioli 2017.
