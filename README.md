@@ -2,6 +2,14 @@
 
 A Switch control built with and for [React](http://facebook.github.io/react/index.html)
 
+## ES6 version
+
+This is the ES6 version
+
+## New version 2.1.0
+
+Add square theme.
+
 ## Demo & Example
 
 Example: [http://gfazioli.github.io/react-switch-button](http://gfazioli.github.io/react-switch-button)
@@ -18,7 +26,7 @@ npm install react-switch-button --save
 At this point you can import `react-switch-button` and its styles in your application as follows:
 
 ```js
-import SwitchButton from 'react-switch-button';
+import Select from 'react-switch-button';
 
 // Be sure to include styles at some point, probably during your bootstrapping
 import 'react-switch-button/dist/react-switch-button.css';
@@ -27,7 +35,7 @@ import 'react-switch-button/dist/react-switch-button.css';
 or
 
 ```js
-const SwitchButton = require( 'react-switch-button' );
+const Switch = require( 'react-switch-button' );
 ```
 
 and then include the *css* in your HTML page.
