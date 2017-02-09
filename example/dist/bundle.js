@@ -64,7 +64,8 @@ var SwitchButton = function (_React$Component) {
     value: function render() {
       var id = undefined,
           label = undefined,
-          labelRight = undefined;
+          labelRight = undefined,
+          mode = this.props.mode || "switch";
 
       if (this.props.id === '' && this.props.name !== '') {
         id = this.props.name;
@@ -78,7 +79,11 @@ var SwitchButton = function (_React$Component) {
         labelRight = React.createElement('label', { htmlFor: id }, this.props.labelRight);
       }
 
-      return React.createElement('div', { className: 'rsbc-switch-button ' + this.props.theme + (this.props.disabled ? " disabled" : "") }, label, React.createElement('input', { onChange: this.props.onChange,
+      if (['switch', 'select'].indexOf(mode) < -1) {
+        mode = "switch";
+      }
+
+      return React.createElement('div', { className: 'rsbc-switch-button rsbc-mode-' + mode + ' ' + this.props.theme + (this.props.disabled ? " disabled" : "") }, label, React.createElement('input', { onChange: this.props.onChange,
         defaultChecked: this.props.defaultChecked,
         disabled: this.props.disabled,
         id: id,
@@ -101,6 +106,7 @@ SwitchButton.propTypes = {
   disabled: React.PropTypes.bool,
   theme: React.PropTypes.string,
   checked: React.PropTypes.string,
+  mode: React.PropTypes.string,
   onChange: React.PropTypes.func
 };
 
@@ -114,6 +120,7 @@ SwitchButton.defaultProps = {
   defaultChecked: false,
   theme: 'rsbc-switch-button-flat-round',
   checked: null,
+  mode: "switch",
   onChange: SwitchButton.handleChange
 };
 
