@@ -77,53 +77,22 @@ var App = React.createClass({
         theme: this.state.theme,
         label: 'Disabled',
         disabled: true })
+    }, {
+      label: "New in v2.2.0 Mode select",
+      code: '<SwitchButton name="switch-8" label="Switch mode" mode="select"/>',
+      object: React.createElement(SwitchButton, { name: 'switch-8',
+        mode: 'select',
+        labelRight: 'Turn right',
+        label: 'Turn left' })
     }];
 
     var rows = code.map(function (o, i) {
 
-      return React.createElement(
-        'div',
-        { className: 'example',
-          key: i },
-        React.createElement(
-          'h3',
-          null,
-          o.label
-        ),
-        React.createElement(
-          'pre',
-          null,
-          o.code
-        ),
-        React.createElement(
-          'div',
-          { className: 'result' },
-          o.object
-        )
-      );
+      return React.createElement('div', { className: 'example',
+        key: i }, React.createElement('h3', null, o.label), React.createElement('pre', null, o.code), React.createElement('div', { className: 'result' }, o.object));
     });
 
-    return React.createElement(
-      'div',
-      { className: 'examples' },
-      React.createElement(
-        'h1',
-        null,
-        'Say Hello, React Switch Button'
-      ),
-      React.createElement(
-        'div',
-        { className: 'example' },
-        React.createElement(
-          'h3',
-          null,
-          'New in v.2.1.0'
-        )
-      ),
-      React.createElement(SwitchButton, { name: 'switch-theme', label: 'Switch Theme', onChange: this.onChange }),
-      React.createElement('hr', null),
-      rows
-    );
+    return React.createElement('div', { className: 'examples' }, React.createElement('h1', null, 'Say Hello, React Switch Button'), React.createElement('div', { className: 'example' }, React.createElement('h3', null, 'New in v.2.1.0')), React.createElement(SwitchButton, { name: 'switch-theme', label: 'Switch Theme', onChange: this.onChange }), React.createElement('hr', null), rows);
   }
 });
 

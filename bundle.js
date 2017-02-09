@@ -9,7 +9,7 @@ var SwitchButton = React.createClass({
   displayName: 'Switch Button',
 
   // Version
-  version: '2.1.0',
+  version: '2.2.0',
 
   /**
    * The props types.
@@ -24,6 +24,7 @@ var SwitchButton = React.createClass({
     disabled: React.PropTypes.bool,
     theme: React.PropTypes.string,
     checked: React.PropTypes.string,
+    mode: React.PropTypes.string,
     onChange: React.PropTypes.func
   },
 
@@ -43,6 +44,7 @@ var SwitchButton = React.createClass({
       defaultChecked: false,
       theme: 'rsbc-switch-button-flat-round',
       checked: null,
+      mode: "switch",
       onChange: this.handleChange
     };
   },
@@ -60,41 +62,31 @@ var SwitchButton = React.createClass({
   render: function render() {
     var id = undefined,
         label = undefined,
-        labelRight = undefined;
+        labelRight = undefined,
+        mode = this.props.mode || "switch";
 
     if (this.props.id === '' && this.props.name !== '') {
       id = this.props.name;
     }
 
     if (this.props.label !== '') {
-      label = React.createElement(
-        'label',
-        { htmlFor: id },
-        this.props.label
-      );
+      label = React.createElement('label', { htmlFor: id }, this.props.label);
     }
 
     if (this.props.labelRight !== '') {
-      labelRight = React.createElement(
-        'label',
-        { htmlFor: id },
-        this.props.labelRight
-      );
+      labelRight = React.createElement('label', { htmlFor: id }, this.props.labelRight);
     }
 
-    return React.createElement(
-      'div',
-      { className: 'rsbc-switch-button ' + this.props.theme + (this.props.disabled ? " disabled" : "") },
-      label,
-      React.createElement('input', { onChange: this.props.onChange,
-        defaultChecked: this.props.defaultChecked,
-        disabled: this.props.disabled,
-        id: id, name: this.props.name,
-        type: 'checkbox',
-        value: '1' }),
-      React.createElement('label', { htmlFor: id }),
-      labelRight
-    );
+    if (['switch', 'select'].indexOf(mode) < -1) {
+      mode = "switch";
+    }
+
+    return React.createElement('div', { className: 'rsbc-switch-button rsbc-mode-' + mode + ' ' + this.props.theme + (this.props.disabled ? " disabled" : "") }, label, React.createElement('input', { onChange: this.props.onChange,
+      defaultChecked: this.props.defaultChecked,
+      disabled: this.props.disabled,
+      id: id, name: this.props.name,
+      type: 'checkbox',
+      value: '1' }), React.createElement('label', { htmlFor: id }), labelRight);
   }
 
 });
