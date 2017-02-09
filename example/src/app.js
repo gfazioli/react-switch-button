@@ -85,6 +85,14 @@ const App = React.createClass( {
                                theme={this.state.theme}
                                label="Disabled"
                                disabled={true}/>
+      },
+      {
+        label  : "New in v2.2.0 Mode select",
+        code   : '<SwitchButton name="switch-8" label="Switch mode" mode="select"/>',
+        object : <SwitchButton name="switch-8"
+                               mode="select"
+                               labelRight="Turn right"
+                               label="Turn left" />
       }
     ];
 

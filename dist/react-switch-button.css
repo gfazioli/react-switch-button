@@ -132,6 +132,11 @@
   margin-left: 24px;
   background-color: #d5d5d5;
 }
+.rsbc-switch-button.rsbc-switch-button.rsbc-switch-button-flat-round.rsbc-mode-select input[type="checkbox"] + label:after,
+.rsbc-switch-button.rsbc-switch-button.rsbc-switch-button-flat-round.rsbc-mode-select:hover input[type="checkbox"]:checked + label,
+.rsbc-switch-button.rsbc-switch-button.rsbc-switch-button-flat-round.rsbc-mode-select input[type="checkbox"] + label {
+  background-color: #579fcb !important;
+}
 /**
  * React Switch Button control style square.
  *
@@ -216,4 +221,9 @@
 .rsbc-switch-button.rsbc-switch-button-flat-square.disabled input[type="checkbox"]:checked + label:after {
   margin-left: 24px;
   background-color: #d5d5d5;
+}
+.rsbc-switch-button.rsbc-switch-button.rsbc-switch-button-flat-square.rsbc-mode-select input[type="checkbox"] + label:after,
+.rsbc-switch-button.rsbc-switch-button.rsbc-switch-button-flat-square.rsbc-mode-select:hover input[type="checkbox"]:checked + label,
+.rsbc-switch-button.rsbc-switch-button.rsbc-switch-button-flat-square.rsbc-mode-select input[type="checkbox"] + label {
+  background-color: #579fcb !important;
 }

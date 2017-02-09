@@ -6,7 +6,7 @@ const SwitchButton = React.createClass( {
   displayName : 'Switch Button',
 
   // Version
-  version : '2.1.0',
+  version : '2.2.0',
 
   /**
    * The props types.
@@ -21,6 +21,7 @@ const SwitchButton = React.createClass( {
     disabled       : React.PropTypes.bool,
     theme          : React.PropTypes.string,
     checked        : React.PropTypes.string,
+    mode           : React.PropTypes.string,
     onChange       : React.PropTypes.func
   },
 
@@ -42,6 +43,7 @@ const SwitchButton = React.createClass( {
       defaultChecked : false,
       theme          : 'rsbc-switch-button-flat-round',
       checked        : null,
+      mode           : "switch",
       onChange       : this.handleChange
     };
   },
@@ -59,7 +61,8 @@ const SwitchButton = React.createClass( {
    */
   render : function()
   {
-    let id, label, labelRight;
+    let id, label, labelRight,
+        mode = this.props.mode || "switch";
 
     if( this.props.id === '' && this.props.name !== '' ) {
       id = this.props.name;
@@ -77,8 +80,12 @@ const SwitchButton = React.createClass( {
       );
     }
 
+    if( [ 'switch', 'select' ].indexOf( mode ) < -1 ) {
+      mode = "switch";
+    }
+
     return (
-      <div className={'rsbc-switch-button ' + this.props.theme + ( this.props.disabled ? " disabled" : "") }>
+      <div className={'rsbc-switch-button rsbc-mode-' + mode + ' ' + this.props.theme + ( this.props.disabled ? " disabled" : "") }>
         {label}
         <input onChange={this.props.onChange}
                defaultChecked={this.props.defaultChecked}

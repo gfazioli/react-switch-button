@@ -112,4 +112,14 @@
     background-color : @rsbc-theme-flat-color-disabled-border;
   }
 
+  &.rsbc-switch-button.rsbc-switch-button-flat-square {
+    &.rsbc-mode-select {
+      input[type="checkbox"] + label:after,
+      &:hover input[type="checkbox"]:checked + label,
+      input[type="checkbox"] + label {
+        background-color : @rsbc-theme-flat-color-on !important;
+      }
+    }
+  }
+
 }
