@@ -22,7 +22,7 @@ npm install react-switch-button --save
 At this point you can import `react-switch-button` and its styles in your application as follows:
 
 ```js
-import Select from 'react-switch-button';
+import SwitchButton from 'react-switch-button';
 
 // Be sure to include styles at some point, probably during your bootstrapping
 import 'react-switch-button/dist/react-switch-button.css';
@@ -31,7 +31,7 @@ import 'react-switch-button/dist/react-switch-button.css';
 or
 
 ```js
-const Switch = require( 'react-switch-button' );
+const SwitchButton = require( 'react-switch-button' );
 ```
 
 and then include the *css* in your HTML page.
