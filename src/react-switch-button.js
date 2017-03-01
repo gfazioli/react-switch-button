@@ -1,4 +1,4 @@
-const React = require('react');
+import React from "react";
 
 const SwitchButton = React.createClass( {
 
@@ -6,7 +6,7 @@ const SwitchButton = React.createClass( {
   displayName : 'Switch Button',
 
   // Version
-  version : '2.2.0',
+  version : '2.2.1',
 
   /**
    * The props types.
@@ -102,4 +102,4 @@ const SwitchButton = React.createClass( {
 
 } );
 
-module.exports = SwitchButton;
+export default SwitchButton;

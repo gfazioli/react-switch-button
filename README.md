@@ -2,10 +2,6 @@
 
 A Switch control built with and for [React](http://facebook.github.io/react/index.html)
 
-## New version 2.1.0
-
-Add square theme.
-
 ## Demo & Example
 
 Example: [http://gfazioli.github.io/react-switch-button](http://gfazioli.github.io/react-switch-button)

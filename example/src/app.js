@@ -1,10 +1,10 @@
-const React        = require( 'react' ),
-      ReactDom     = require( 'react-dom' ),
-      SwitchButton = require( 'react-switch-button' );
+import React from "react";
+import ReactDom     from "react-dom";
+import SwitchButton from "react-switch-button";
 
 const App = React.createClass( {
 
-  onChange : function(e)
+  onChange : function( e )
   {
     const theme = ( this.state.theme === 'rsbc-switch-button-flat-square' ) ? 'rsbc-switch-button-flat-round' : 'rsbc-switch-button-flat-square'
 
@@ -15,7 +15,8 @@ const App = React.createClass( {
     );
   },
 
-  getInitialState : function() {
+  getInitialState : function()
+  {
 
     return {
       theme : 'rsbc-switch-button-flat-round'
@@ -27,8 +28,10 @@ const App = React.createClass( {
 
     const code = [
       {
-        label : "Simple usage",
-        code  : '<SwitchButton name="switch-1" />', object : <SwitchButton theme={this.state.theme} name="switch-1"/>
+        label  : "Simple usage",
+        code   : '<SwitchButton name="switch-1" />',
+        object : <SwitchButton theme={this.state.theme}
+                               name="switch-1"/>
       },
       {
         label  : "Set Theme",
@@ -91,8 +94,9 @@ const App = React.createClass( {
         code   : '<SwitchButton name="switch-8" label="Switch mode" mode="select"/>',
         object : <SwitchButton name="switch-8"
                                mode="select"
+                               theme={this.state.theme}
                                labelRight="Turn right"
-                               label="Turn left" />
+                               label="Turn left"/>
       }
     ];
 
@@ -117,10 +121,21 @@ const App = React.createClass( {
         <h1>Say Hello, React Switch Button</h1>
 
         <div className="example">
+          <h3>New in v.2.2.0</h3>
+        </div>
+
+        <SwitchButton name="new-mode-select"
+                      mode="select"
+                      labelRight="Turn right"
+                      label="Turn left"/>
+
+        <div className="example">
           <h3>New in v.2.1.0</h3>
         </div>
 
-        <SwitchButton name="switch-theme" label="Switch Theme" onChange={this.onChange} />
+        <SwitchButton name="switch-theme"
+                      label="Switch Theme"
+                      onChange={this.onChange}/>
         <hr/>
         {rows}
       </div>

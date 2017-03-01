@@ -1,7 +1,7 @@
 {
   "name": "react-switch-button",
   "main": "dist/react-switch-button.min.js",
-  "version": "2.0.0",
+  "version": "2.2.1",
   "homepage": "http://gfazioli.github.io/react-switch-button/",
   "authors": [
     "Giovambattista Fazioli"
