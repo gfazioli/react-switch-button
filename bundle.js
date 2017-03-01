@@ -1,31 +1,41 @@
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"react-switch-button":[function(require,module,exports){
 'use strict';
 
-var React = require('react');
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
-var SwitchButton = React.createClass({
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var SwitchButton = _react2['default'].createClass({
 
   // Display name
   displayName: 'Switch Button',
 
   // Version
-  version: '2.2.0',
+  version: '2.2.1',
 
   /**
    * The props types.
    */
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    title: React.PropTypes.string,
-    label: React.PropTypes.string,
-    labelRight: React.PropTypes.string,
-    defaultChecked: React.PropTypes.bool,
-    disabled: React.PropTypes.bool,
-    theme: React.PropTypes.string,
-    checked: React.PropTypes.string,
-    mode: React.PropTypes.string,
-    onChange: React.PropTypes.func
+    id: _react2['default'].PropTypes.string,
+    name: _react2['default'].PropTypes.string,
+    title: _react2['default'].PropTypes.string,
+    label: _react2['default'].PropTypes.string,
+    labelRight: _react2['default'].PropTypes.string,
+    defaultChecked: _react2['default'].PropTypes.bool,
+    disabled: _react2['default'].PropTypes.bool,
+    theme: _react2['default'].PropTypes.string,
+    checked: _react2['default'].PropTypes.string,
+    mode: _react2['default'].PropTypes.string,
+    onChange: _react2['default'].PropTypes.func
   },
 
   /**
@@ -70,27 +80,28 @@ var SwitchButton = React.createClass({
     }
 
     if (this.props.label !== '') {
-      label = React.createElement('label', { htmlFor: id }, this.props.label);
+      label = _react2['default'].createElement('label', { htmlFor: id }, this.props.label);
     }
 
     if (this.props.labelRight !== '') {
-      labelRight = React.createElement('label', { htmlFor: id }, this.props.labelRight);
+      labelRight = _react2['default'].createElement('label', { htmlFor: id }, this.props.labelRight);
     }
 
     if (['switch', 'select'].indexOf(mode) < -1) {
       mode = "switch";
     }
 
-    return React.createElement('div', { className: 'rsbc-switch-button rsbc-mode-' + mode + ' ' + this.props.theme + (this.props.disabled ? " disabled" : "") }, label, React.createElement('input', { onChange: this.props.onChange,
+    return _react2['default'].createElement('div', { className: 'rsbc-switch-button rsbc-mode-' + mode + ' ' + this.props.theme + (this.props.disabled ? " disabled" : "") }, label, _react2['default'].createElement('input', { onChange: this.props.onChange,
       defaultChecked: this.props.defaultChecked,
       disabled: this.props.disabled,
       id: id, name: this.props.name,
       type: 'checkbox',
-      value: '1' }), React.createElement('label', { htmlFor: id }), labelRight);
+      value: '1' }), _react2['default'].createElement('label', { htmlFor: id }), labelRight);
   }
 
 });
 
-module.exports = SwitchButton;
+exports['default'] = SwitchButton;
+module.exports = exports['default'];
 
 },{"react":undefined}]},{},[]);
