@@ -93,7 +93,7 @@ var App = _react2["default"].createClass({
         disabled: true })
     }, {
       label: "New in v2.2.0 Mode select",
-      code: '<SwitchButton name="switch-8" label="Switch mode" mode="select"/>',
+      code: '<SwitchButton name="switch-8" label="Switch mode" mode="select" labelRight="Turn right" label="Turn left"/>',
       object: _react2["default"].createElement(_reactSwitchButton2["default"], { name: "switch-8",
         mode: "select",
         theme: this.state.theme,
@@ -109,9 +109,11 @@ var App = _react2["default"].createClass({
 
     return _react2["default"].createElement("div", { className: "examples" }, _react2["default"].createElement("h1", null, "Say Hello, React Switch Button"), _react2["default"].createElement("div", { className: "example" }, _react2["default"].createElement("h3", null, "New in v.2.2.0")), _react2["default"].createElement(_reactSwitchButton2["default"], { name: "new-mode-select",
       mode: "select",
+      theme: this.state.theme,
       labelRight: "Turn right",
       label: "Turn left" }), _react2["default"].createElement("div", { className: "example" }, _react2["default"].createElement("h3", null, "New in v.2.1.0")), _react2["default"].createElement(_reactSwitchButton2["default"], { name: "switch-theme",
       label: "Switch Theme",
+      theme: this.state.theme,
       onChange: this.onChange }), _react2["default"].createElement("hr", null), rows);
   }
 });

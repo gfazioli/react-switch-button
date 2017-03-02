@@ -91,7 +91,7 @@ const App = React.createClass( {
       },
       {
         label  : "New in v2.2.0 Mode select",
-        code   : '<SwitchButton name="switch-8" label="Switch mode" mode="select"/>',
+        code   : '<SwitchButton name="switch-8" label="Switch mode" mode="select" labelRight="Turn right" label="Turn left"/>',
         object : <SwitchButton name="switch-8"
                                mode="select"
                                theme={this.state.theme}
@@ -126,6 +126,7 @@ const App = React.createClass( {
 
         <SwitchButton name="new-mode-select"
                       mode="select"
+                      theme={this.state.theme}
                       labelRight="Turn right"
                       label="Turn left"/>
 
@@ -135,6 +136,7 @@ const App = React.createClass( {
 
         <SwitchButton name="switch-theme"
                       label="Switch Theme"
+                      theme={this.state.theme}
                       onChange={this.onChange}/>
         <hr/>
         {rows}
