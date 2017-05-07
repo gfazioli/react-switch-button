@@ -23,7 +23,7 @@
     "gulp": "^3.9.1",
     "react-component-gulp-tasks": "^0.7.7"
   },
-  "browser": "dist/react-switch-button.min.js",
+  "browser": "lib/react-switch-button.js",
   "browserify": {
     "transform": [
       "babelify"
