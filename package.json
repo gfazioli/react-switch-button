@@ -1,6 +1,6 @@
 {
   "name": "react-switch-button",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "private": false,
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
   "main": "dist/react-switch-button.min.js",

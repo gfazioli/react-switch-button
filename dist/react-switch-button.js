@@ -20,7 +20,7 @@ var SwitchButton = _react2['default'].createClass({
   displayName: 'Switch Button',
 
   // Version
-  version: '2.2.1',
+  version: '2.2.2',
 
   /**
    * The props types.
