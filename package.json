@@ -15,9 +15,11 @@
     "url": "https://github.com/gfazioli/react-switch-button/issues"
   },
   "dependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "babelify": "~7.3"
+    "babelify": "~7.3",
+    "create-react-class": "^15.5.3",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

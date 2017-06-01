@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDom     from "react-dom";
 import SwitchButton from "react-switch-button";
+import createClass	from 'create-react-class'
 
-const App = React.createClass( {
+const App = createClass( {
 
   onChange : function( e )
   {
@@ -10,18 +11,23 @@ const App = React.createClass( {
 
     this.setState(
       {
-        theme : theme
+        theme : theme,
       }
     );
   },
 
   getInitialState : function()
   {
-
     return {
-      theme : 'rsbc-switch-button-flat-round'
+      theme : 'rsbc-switch-button-flat-round',
+			checked: false,
     };
   },
+	
+	onSwitchCheckedStatus : function()
+	{
+		this.setState((prevState) => ({ checked: !prevState.checked }))
+	},
 
   render : function()
   {
@@ -119,6 +125,16 @@ const App = React.createClass( {
     return (
       <div className="examples">
         <h1>Say Hello, React Switch Button</h1>
+
+				<div className="example">
+					<h3>New in v.2.3.0 - controlled component</h3>
+				</div>
+				
+				<SwitchButton name='controlled-component'
+											mode='select'
+											theme={this.state.theme}
+											checked={this.state.checked}
+											onChange={this.onSwitchCheckedStatus}/>
 
         <div className="example">
           <h3>New in v.2.2.0</h3>
