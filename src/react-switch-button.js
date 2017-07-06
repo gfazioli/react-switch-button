@@ -29,7 +29,7 @@ const SwitchButton = React.createClass( {
   /**
    * Default props.
    *
-   * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
+   * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: boolean, onChange: *}}
    */
   getDefaultProps : function()
   {
@@ -42,7 +42,7 @@ const SwitchButton = React.createClass( {
       disabled       : false,
       defaultChecked : false,
       theme          : 'rsbc-switch-button-flat-round',
-      checked        : null,
+      checked        : false,
       mode           : "switch",
       onChange       : this.handleChange
     };
@@ -90,7 +90,9 @@ const SwitchButton = React.createClass( {
         <input onChange={this.props.onChange}
                defaultChecked={this.props.defaultChecked}
                disabled={this.props.disabled}
-               id={id} name={this.props.name}
+               id={id}
+               name={this.props.name}
+               checked={this.props.checked}
                type="checkbox"
                value="1"/>
         <label htmlFor={id}>

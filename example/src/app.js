@@ -10,7 +10,8 @@ const App = React.createClass( {
 
     this.setState(
       {
-        theme : theme
+        theme : theme,
+        checked = true
       }
     );
   },
@@ -97,6 +98,20 @@ const App = React.createClass( {
                                theme={this.state.theme}
                                labelRight="Turn right"
                                label="Turn left"/>
+      },
+      {
+        label  : "Change programmatically",
+        code   : '<div><SwitchButton name="switch-9" theme={this.state.theme} label="Click on the button" checked={this.state.checked}/><button onClick={()=>{this.setState({checked: !this.state.checked})}}>Click me!</button></div>',
+        object : <div>
+          <SwitchButton
+            name="switch-9"
+            theme={this.state.theme}
+            label="Click on the button"
+            checked={this.state.checked}/>
+            <button onClick={()=>{
+              this.setState({checked: !this.state.checked})
+            }}>Click me!</button>
+        </div>
       }
     ];
 
