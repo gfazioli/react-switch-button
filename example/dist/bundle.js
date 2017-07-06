@@ -41,7 +41,7 @@ var SwitchButton = _react2['default'].createClass({
   /**
    * Default props.
    *
-   * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: null, onChange: *}}
+   * @returns {{id: string, name: string, title: string, label: string, labelRight: string, defaultChecked: string, theme: string, checked: boolean, onChange: *}}
    */
   getDefaultProps: function getDefaultProps() {
     return {
@@ -53,7 +53,7 @@ var SwitchButton = _react2['default'].createClass({
       disabled: false,
       defaultChecked: false,
       theme: 'rsbc-switch-button-flat-round',
-      checked: null,
+      checked: false,
       mode: "switch",
       onChange: this.handleChange
     };
@@ -94,7 +94,9 @@ var SwitchButton = _react2['default'].createClass({
     return _react2['default'].createElement('div', { className: 'rsbc-switch-button rsbc-mode-' + mode + ' ' + this.props.theme + (this.props.disabled ? " disabled" : "") }, label, _react2['default'].createElement('input', { onChange: this.props.onChange,
       defaultChecked: this.props.defaultChecked,
       disabled: this.props.disabled,
-      id: id, name: this.props.name,
+      id: id,
+      name: this.props.name,
+      checked: this.props.checked,
       type: 'checkbox',
       value: '1' }), _react2['default'].createElement('label', { htmlFor: id }), labelRight);
   }
