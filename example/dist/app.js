@@ -70,7 +70,7 @@ var App = _react2["default"].createClass({
         defaultChecked: true })
     }, {
       label: "Add left and right label",
-      code: '<SwitchButton name="switch-5" label="Both" label_right="Click me" defaultChecked={true} />',
+      code: '<SwitchButton name="switch-5" label="Both" labelRight="Click me" defaultChecked={true} />',
       object: _react2["default"].createElement(_reactSwitchButton2["default"], { name: "switch-5",
         theme: this.state.theme,
         label: "Both",
