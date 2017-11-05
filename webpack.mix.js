@@ -33,12 +33,6 @@ mix
   .react( "example/src/app.jsx", "example/dist" )
   .copy( "example/src/index.html", "example/dist" );
 
-
-// .react( "src/react-switch-button.jsx", "dist" )
-// .less( "example/src/app.less", "example/dist" )
-// .react( "example/src/app.jsx", "example/dist" )
-// .version();
-
 mix.webpackConfig( {
   resolve : {
     extensions : [ '*', '.js', '.jsx', '.vue' ],
