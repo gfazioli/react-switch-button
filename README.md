@@ -2,13 +2,19 @@
 
 A Switch control built with and for [React](http://facebook.github.io/react/index.html)
 
-## ES6 version
+## What's new in version 2.3.0
 
-This is the ES6 version
+* Rewritten in ES6 version
+* Add Laravel-Mix
+* The props `defaultChecked` is deprecated in favor of `checked`
 
-## New version 2.1.0
+## What's new in version 2.2.0
 
-Add square theme.
+* Add new mode props
+
+## What's new in version 2.1.0
+
+* Add square theme
 
 ## Demo & Example
 
@@ -48,6 +54,30 @@ Of course, you can also use the standalone build by including `react-switch-butt
 <script src="https://unpkg.com/react-switch-button/dist/react-switch-button.js"></script>
 
 <link rel="stylesheet" href="https://unpkg.com/react-switch-button/dist/react-switch-button.css">
+```
+
+# Usage
+
+```js
+import React from "react"
+import ReactDom from "react-dom"
+import SwitchButton from "react-switch-button"
+
+class Application extends React.Component {
+
+    constructor( props )
+    {
+      super( props );
+    }
+
+    render() {
+        return (
+            <SwitchButton label="Click me" />
+        );
+    }
+
+}
+
 ```
 
 # Contributing

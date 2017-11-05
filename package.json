@@ -1,6 +1,6 @@
 {
   "name": "react-switch-button",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "private": false,
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
   "main": "dist/react-switch-button.min.js",
@@ -14,26 +14,24 @@
   "bugs": {
     "url": "https://github.com/gfazioli/react-switch-button/issues"
   },
-  "dependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "babelify": "~7.3"
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "react-component-gulp-tasks": "^0.7.7"
-  },
-  "browser": "dist/react-switch-button.min.js",
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
-  },
-  "browserify-shim": {
-    "react": "global:React"
-  },
-  "scripts": {
-    "test": "echo \"no tests yet\" && exit 0"
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^3.2.4",
+    "laravel-mix": "^1.4.5",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.6.0",
+    "react": "~15.4.2",
+    "react-dom": "~15.4.2",
+    "webpack-strip-blocks": "^1.0.0"
   },
   "keywords": [
     "react",
