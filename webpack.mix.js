@@ -38,7 +38,6 @@ mix.webpackConfig( {
     extensions : [ '*', '.js', '.jsx', '.vue' ],
     alias      : {
       'vue$'       : 'vue/dist/vue.common.js',
-      'ewp-base'   : __dirname + '/resources/assets/js/ewp-base.js',
       'components' : __dirname + '/src',
     },
   },
