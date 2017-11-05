@@ -18,7 +18,6 @@
   vertical-align: middle;
   margin: 0;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .rsbc-switch-button label {
@@ -49,7 +48,6 @@
   -ms-user-select: none;
   user-select: none;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /**
@@ -66,12 +64,8 @@
   height: 24px;
   vertical-align: middle;
   background-color: #aaa;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
   border-radius: 60px;
   -webkit-transition: background 0.4s;
-  -moz-transition: background 0.4s;
-  -o-transition: background 0.4s;
   transition: background 0.4s;
 }
 .rsbc-switch-button.rsbc-switch-button-flat-round.disabled input[type="checkbox"] + label {
@@ -95,12 +89,8 @@
   bottom: 2px;
   right: 2px;
   background-color: #fff;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
   border-radius: 60px;
   -webkit-transition: background 0.4s;
-  -moz-transition: background 0.4s;
-  -o-transition: background 0.4s;
   transition: background 0.4s;
 }
 .rsbc-switch-button.rsbc-switch-button-flat-round input[type="checkbox"] + label:after {
@@ -109,12 +99,8 @@
   bottom: 4px;
   width: 16px;
   background-color: #919191;
-  -webkit-border-radius: 52px;
-  -moz-border-radius: 52px;
   border-radius: 52px;
   -webkit-transition: margin 0.4s, background 0.4s;
-  -moz-transition: margin 0.4s, background 0.4s;
-  -o-transition: margin 0.4s, background 0.4s;
   transition: margin 0.4s, background 0.4s;
 }
 .rsbc-switch-button.rsbc-switch-button-flat-round.disabled input[type="checkbox"] + label:after {
@@ -156,12 +142,8 @@
   height: 24px;
   vertical-align: middle;
   background-color: #aaa;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: background 0.4s;
-  -moz-transition: background 0.4s;
-  -o-transition: background 0.4s;
   transition: background 0.4s;
 }
 .rsbc-switch-button.rsbc-switch-button-flat-square.disabled input[type="checkbox"] + label {
@@ -185,12 +167,8 @@
   bottom: 2px;
   right: 2px;
   background-color: #fff;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
   -webkit-transition: background 0.4s;
-  -moz-transition: background 0.4s;
-  -o-transition: background 0.4s;
   transition: background 0.4s;
 }
 .rsbc-switch-button.rsbc-switch-button-flat-square input[type="checkbox"] + label:after {
@@ -199,12 +177,8 @@
   bottom: 4px;
   width: 16px;
   background-color: #919191;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
   -webkit-transition: margin 0.4s, background 0.4s;
-  -moz-transition: margin 0.4s, background 0.4s;
-  -o-transition: margin 0.4s, background 0.4s;
   transition: margin 0.4s, background 0.4s;
 }
 .rsbc-switch-button.rsbc-switch-button-flat-square.disabled input[type="checkbox"] + label:after {
@@ -302,14 +276,10 @@ label {
   color: #555;
   padding: 16px;
   border-bottom: 3px solid #cccccc;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 .examples .example .result {
   border: 1px solid #cccccc;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 2rem;
 }
