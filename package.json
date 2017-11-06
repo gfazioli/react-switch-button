@@ -1,6 +1,6 @@
 {
   "name": "react-switch-button",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "private": false,
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
   "main": "dist/react-switch-button.min.js",
@@ -32,6 +32,15 @@
     "react": "~15.4.2",
     "react-dom": "~15.4.2",
     "webpack-strip-blocks": "^1.0.0"
+  },
+  "browser": "src/react-switch-button.jsx",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "browserify-shim": {
+    "react": "global:React"
   },
   "keywords": [
     "react",
