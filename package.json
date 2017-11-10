@@ -1,5 +1,5 @@
 {
-  "name": "react-switch-button",
+  "name": "react-switch-button-dev",
   "version": "2.3.2",
   "private": false,
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
@@ -46,5 +46,8 @@
   "keywords": [
     "react",
     "react-component"
-  ]
+  ],
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  }
 }
