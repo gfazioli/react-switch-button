@@ -1,5 +1,5 @@
 import React from "react"
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 class SwitchButton extends React.Component {
 
@@ -27,13 +27,29 @@ class SwitchButton extends React.Component {
         this.props.disabled ? " disabled" : ""
       ];
 
+      const label = () => {
+        if( this.props.label.length > 0 ) {
+          return (
+            <label htmlFor={id}>{this.props.label}</label>
+          );
+        }
+
+        return null;
+      };
+
+      const labelRight = () => {
+        if( this.props.labelRight.length > 0 ) {
+          return (
+            <label htmlFor={id}>{this.props.labelRight}</label>
+          );
+        }
+
+        return null;
+      };
+
       return (
         <div className={classes.join( " " ).trim()}>
-          {
-            (this.props.label.length > 0)
-              ? <label htmlFor={id}>{this.props.label}</label>
-              : null
-          }
+          {label()}
           <input onChange={this.onChange.bind( this )}
                  checked={this.state.checked}
                  disabled={this.props.disabled}
@@ -43,11 +59,7 @@ class SwitchButton extends React.Component {
                  value="1"/>
           <label htmlFor={id}>
           </label>
-          {
-            (this.props.labelRight.length > 0)
-              ? <label htmlFor={id}>{this.props.labelRight}</label>
-              : null
-          }
+          {labelRight()}
         </div>
       );
     }
@@ -65,7 +77,7 @@ class SwitchButton extends React.Component {
     );
   }
 
-  onChange( e )
+  onChange()
   {
 
     this.props.onChange( !this.state.checked );

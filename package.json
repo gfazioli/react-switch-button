@@ -1,10 +1,10 @@
 {
   "name": "react-switch-button",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "private": false,
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
   "main": "dist/react-switch-button.js",
-  "author": "Giovambattista fazioli",
+  "author": "Giovambattista Fazioli",
   "license": "MIT",
   "homepage": "http://gfazioli.github.io/react-switch-button/",
   "repository": {
@@ -48,6 +48,7 @@
     "react-component"
   ],
   "dependencies": {
+    "gulp": "^3.9.1",
     "prop-types": "^15.6.0"
   }
 }
