@@ -8,12 +8,6 @@ Hey, I've created a new fresh component here https://github.com/gfazioli/react-t
 
 It's the same component but now working fine. Use `yarn add react-toggle-component`
 
-and `import Toggle from "react-toggle-component"`
-
-With this new version, you don't need to load the styles. They are embedded.
-
-Let me know if everything is ok
-
 ## What's new in version 2.3.0
 
 * Rewritten in ES6 version
