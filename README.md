@@ -2,7 +2,7 @@
 
 A Switch control built with and for [React](http://facebook.github.io/react/index.html)
 
-## New version here
+## ⚠️⚠️New version here ⚠️⚠️
 
 Hey, I've created a new fresh component here https://github.com/gfazioli/react-toggle
 
